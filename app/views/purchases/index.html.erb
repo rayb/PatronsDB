@@ -1,0 +1,55 @@
+<h1>Listing purchases</h1>
+
+<table>
+  <tr>
+    <th>Purchase</th>
+    <th>Ticket</th>
+    <th>Order date</th>
+    <th>Start date</th>
+    <th>Last name</th>
+    <th>First name</th>
+    <th>Organization</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Admission</th>
+    <th>Price</th>
+    <th>Count</th>
+    <th>Address 1</th>
+    <th>Address 2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @purchases.each do |purchase| %>
+  <tr>
+    <td><%= purchase.purchase %></td>
+    <td><%= purchase.ticket_id %></td>
+    <td><%= purchase.order_date %></td>
+    <td><%= purchase.start_date %></td>
+    <td><%= purchase.last_name %></td>
+    <td><%= purchase.first_name %></td>
+    <td><%= purchase.organization %></td>
+    <td><%= purchase.phone %></td>
+    <td><%= purchase.email %></td>
+    <td><%= purchase.admission %></td>
+    <td><%= purchase.price %></td>
+    <td><%= purchase.count %></td>
+    <td><%= purchase.address_1 %></td>
+    <td><%= purchase.address_2 %></td>
+    <td><%= purchase.city %></td>
+    <td><%= purchase.state %></td>
+    <td><%= purchase.zip %></td>
+    <td><%= link_to 'Show', purchase %></td>
+    <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
+    <td><%= link_to 'Destroy', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Purchase', new_purchase_path %>

@@ -1,0 +1,90 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Purchase:</b>
+  <%= @purchase.purchase %>
+</p>
+
+<p>
+  <b>Ticket:</b>
+  <%= @purchase.ticket_id %>
+</p>
+
+<p>
+  <b>Order date:</b>
+  <%= @purchase.order_date %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @purchase.start_date %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @purchase.last_name %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @purchase.first_name %>
+</p>
+
+<p>
+  <b>Organization:</b>
+  <%= @purchase.organization %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @purchase.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @purchase.email %>
+</p>
+
+<p>
+  <b>Admission:</b>
+  <%= @purchase.admission %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @purchase.price %>
+</p>
+
+<p>
+  <b>Count:</b>
+  <%= @purchase.count %>
+</p>
+
+<p>
+  <b>Address 1:</b>
+  <%= @purchase.address_1 %>
+</p>
+
+<p>
+  <b>Address 2:</b>
+  <%= @purchase.address_2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @purchase.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @purchase.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @purchase.zip %>
+</p>
+
+
+<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
+<%= link_to 'Back', purchases_path %>
