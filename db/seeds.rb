@@ -28,6 +28,7 @@ patrons.each_line do |line|
     :company_notes => (company_notes if company_notes != '')
   )
   new_patron.save
+#  nice trick
 #  tracks.each_line do |track|
 #    track_id, an_code, name, location_id, state_location_id, category_id = track.chomp.split(",")
 #    new_track= Track.find_or_create_by_track_code(
