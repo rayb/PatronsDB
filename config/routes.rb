@@ -1,4 +1,8 @@
 PatronsDB::Application.routes.draw do
+  resources :performances
+
+  resources :purchases
+
   resources :plays
 
   # The priority is based upon order of creation:

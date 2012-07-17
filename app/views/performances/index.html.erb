@@ -1,0 +1,27 @@
+<h1>Listing performances</h1>
+
+<table>
+  <tr>
+    <th>Play</th>
+    <th>Start date time</th>
+    <th>Type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @performances.each do |performance| %>
+  <tr>
+    <td><%= performance.play_id %></td>
+    <td><%= performance.start_date_time %></td>
+    <td><%= performance.type %></td>
+    <td><%= link_to 'Show', performance %></td>
+    <td><%= link_to 'Edit', edit_performance_path(performance) %></td>
+    <td><%= link_to 'Destroy', performance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Performance', new_performance_path %>

@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120716011628) do
+ActiveRecord::Schema.define(:version => 20120717183041) do
+
+  create_table "performances", :force => true do |t|
+    t.string   "play_id"
+    t.datetime "start_date_time"
+    t.string   "type"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "plays", :force => true do |t|
     t.string   "name"
@@ -20,6 +28,28 @@ ActiveRecord::Schema.define(:version => 20120716011628) do
     t.integer  "performances"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "purchases", :force => true do |t|
+    t.integer  "ticket_id"
+    t.datetime "order_date"
+    t.datetime "start_date"
+    t.string   "last_name"
+    t.string   "first_name"
+    t.string   "organization"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "admission"
+    t.decimal  "price"
+    t.integer  "count"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "performance_id"
   end
 
   create_table "test_patrons", :force => true do |t|
