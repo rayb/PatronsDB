@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120717183041) do
+ActiveRecord::Schema.define(:version => 20120718040249) do
 
   create_table "performances", :force => true do |t|
     t.string   "play_id"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(:version => 20120717183041) do
   create_table "purchases", :force => true do |t|
     t.integer  "ticket_id"
     t.datetime "order_date"
-    t.datetime "start_date"
+    t.datetime "start_date_time"
     t.string   "last_name"
     t.string   "first_name"
     t.string   "organization"
@@ -47,8 +47,8 @@ ActiveRecord::Schema.define(:version => 20120717183041) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.integer  "performance_id"
   end
 
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(:version => 20120717183041) do
     t.string   "company_notes"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.string   "patron_key"
   end
 
 end
