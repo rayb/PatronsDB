@@ -9,24 +9,22 @@
 TestPatron.delete_all
 open("#{Rails.root}/db/import/stc_patrons.csv") do |patrons|
 patrons.each_line do |line|
-#puts line
   last_name, first_name, title, address1, address2, city, state, zip, phone, email, source,
     notes, company_notes = line.chomp.split(",")
-  @mod_address = address1.sub(/P*.* *O*o*.* *Box/, 'PO Box')
-  if @mod_address != ''
-    @mod_address_num = @mod_address.scan(/\d*/).join('')
-    @patron_key_add = @mod_address_num[0..3]
-  elsif @mod_address == ''
-    @patron_key_add = '0000'
-  elsif @mod_address == /\D*/
+  @mod_address_1 = address1.sub(/P*.* *O*o*.* *Box/, 'PO Box')
+  @mod_address_2 = @mod_address_1.gsub(/"*/, '')
+  if @mod_address_2 =~ /\d/
+    @mod_address_2_num = @mod_address_2.scan(/\d*/).join('')
+    @patron_key_add = @mod_address_2_num[0..3]
+  else
     @patron_key_add = '0000'
   end
-puts @patron_key_add + ' ' + last_name
+  #puts @patron_key_add + ' ' + @mod_address_2
   new_patron = TestPatron.new(
     :last => (last_name.capitalize if last_name),
     :first => (first_name.capitalize if first_name),
     :title_org => (title if title != ''),
-    :address_1 => @mod_address,
+    :address_1 => (@mod_address_2 if @mod_address_2 != ''),
     :address_2 => (address2 if address2 != ''),
     :city => (city if city != ''),
     :state => (state if state != ''),
