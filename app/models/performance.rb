@@ -7,5 +7,5 @@ class Performance < ActiveRecord::Base
   has_many :promotions
   belongs_to :user
 
-  attr_accessible :play_id, :start_date_time, :type
+  attr_accessible :entry_user_id, :play_id, :start_date_time, :type
 end

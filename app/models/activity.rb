@@ -7,5 +7,5 @@ class Activity < ActiveRecord::Base
   belongs_to :user
 
 
-  attr_accessible :end_date, :hours, :notes, :patron_id, :performance_id, :play_id, :role_id, :start_date
+  attr_accessible :end_date, :entry_user_id, :hours, :notes, :patron_id, :performance_id, :play_id, :role_id, :start_date
 end

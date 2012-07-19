@@ -5,5 +5,5 @@ class Raffle < ActiveRecord::Base
   belongs_to :user
 
 
-  attr_accessible :patron_id, :performance_id, :play_id
+  attr_accessible :entry_user_id, :patron_id, :performance_id, :play_id
 end

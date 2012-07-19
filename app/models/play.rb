@@ -7,5 +7,5 @@ class Play < ActiveRecord::Base
   belongs_to :user
 
 
-  attr_accessible :end_date, :name, :performances, :start_date
+  attr_accessible :end_date, :entry_user_id, :name, :performances, :start_date
 end

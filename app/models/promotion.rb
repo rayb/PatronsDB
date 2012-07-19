@@ -8,7 +8,7 @@ class Promotion < ActiveRecord::Base
   belongs_to :user
 
 
-  attr_accessible :name, :performance_id, :play_id, , :promotion_type_id, :start_date
+  attr_accessible :entry_user_id, :name, :performance_id, :play_id, , :promotion_type_id, :start_date
 
 
 end
