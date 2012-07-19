@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120719042951) do
+ActiveRecord::Schema.define(:version => 20120719044110) do
 
   create_table "activities", :force => true do |t|
     t.integer "role_id"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20120719042951) do
     t.date    "start_date"
     t.date    "end_date"
     t.string  "notes"
+    t.integer "entry_user_id"
   end
 
   create_table "donations", :force => true do |t|
@@ -30,8 +31,9 @@ ActiveRecord::Schema.define(:version => 20120719042951) do
     t.decimal  "amount"
     t.integer  "promotion_id"
     t.string   "notes"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "entry_user_id"
   end
 
   create_table "patrons", :force => true do |t|
@@ -57,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20120719042951) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.string   "organization"
+    t.integer  "entry_user_id"
   end
 
   create_table "performances", :force => true do |t|
@@ -65,6 +68,7 @@ ActiveRecord::Schema.define(:version => 20120719042951) do
     t.string   "type"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.integer  "entry_user_id"
   end
 
   create_table "plays", :force => true do |t|
@@ -72,8 +76,9 @@ ActiveRecord::Schema.define(:version => 20120719042951) do
     t.date     "start_date"
     t.date     "end_date"
     t.integer  "performances"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "entry_user_id"
   end
 
   create_table "promotion_patrons", :force => true do |t|
@@ -82,7 +87,8 @@ ActiveRecord::Schema.define(:version => 20120719042951) do
   end
 
   create_table "promotion_types", :force => true do |t|
-    t.string "name"
+    t.string  "name"
+    t.integer "entry_user_id"
   end
 
   create_table "promotions", :force => true do |t|
@@ -93,6 +99,7 @@ ActiveRecord::Schema.define(:version => 20120719042951) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.integer  "promotion_type_id"
+    t.integer  "entry_user_id"
   end
 
   create_table "purchases", :force => true do |t|
@@ -116,6 +123,7 @@ ActiveRecord::Schema.define(:version => 20120719042951) do
     t.datetime "updated_at",      :null => false
     t.integer  "performance_id"
     t.integer  "patron_id"
+    t.integer  "entry_user_id"
   end
 
   create_table "raffles", :force => true do |t|
@@ -124,18 +132,21 @@ ActiveRecord::Schema.define(:version => 20120719042951) do
     t.string   "patron_id"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.integer  "entry_user_id"
   end
 
   create_table "roles", :force => true do |t|
-    t.string "name"
+    t.string  "name"
+    t.integer "entry_user_id"
   end
 
   create_table "sources", :force => true do |t|
     t.date     "start_date"
     t.string   "name"
     t.string   "notes"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "entry_user_id"
   end
 
   create_table "test_patrons", :force => true do |t|
@@ -165,6 +176,7 @@ ActiveRecord::Schema.define(:version => 20120719042951) do
     t.integer "display_order"
     t.date    "retired_date"
     t.string  "email"
+    t.integer "entry_user_id"
   end
 
 end
