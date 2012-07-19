@@ -1,0 +1,31 @@
+<h1>Listing donations</h1>
+
+<table>
+  <tr>
+    <th>Patron</th>
+    <th>Date</th>
+    <th>Amount</th>
+    <th>Promotion</th>
+    <th>Notes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @donations.each do |donation| %>
+  <tr>
+    <td><%= donation.patron_id %></td>
+    <td><%= donation.date %></td>
+    <td><%= donation.amount %></td>
+    <td><%= donation.promotion_id %></td>
+    <td><%= donation.notes %></td>
+    <td><%= link_to 'Show', donation %></td>
+    <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
+    <td><%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Donation', new_donation_path %>
