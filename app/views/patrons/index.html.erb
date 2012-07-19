@@ -1,0 +1,59 @@
+<h1>Listing patrons</h1>
+
+<table>
+  <tr>
+    <th>Last</th>
+    <th>First</th>
+    <th>Address 1</th>
+    <th>Address 2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Source</th>
+    <th>Address key</th>
+    <th>Ticket notes</th>
+    <th>Start date</th>
+    <th>Retiring date</th>
+    <th>Is cast</th>
+    <th>Is industry</th>
+    <th>Is press</th>
+    <th>Is patron</th>
+    <th>Notes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @patrons.each do |patron| %>
+  <tr>
+    <td><%= patron.last %></td>
+    <td><%= patron.first %></td>
+    <td><%= patron.address_1 %></td>
+    <td><%= patron.address_2 %></td>
+    <td><%= patron.city %></td>
+    <td><%= patron.state %></td>
+    <td><%= patron.zip %></td>
+    <td><%= patron.phone %></td>
+    <td><%= patron.email %></td>
+    <td><%= patron.source_id %></td>
+    <td><%= patron.address_key %></td>
+    <td><%= patron.ticket_notes %></td>
+    <td><%= patron.start_date %></td>
+    <td><%= patron.retiring_date %></td>
+    <td><%= patron.is_cast %></td>
+    <td><%= patron.is_industry %></td>
+    <td><%= patron.is_press %></td>
+    <td><%= patron.is_patron %></td>
+    <td><%= patron.notes %></td>
+    <td><%= link_to 'Show', patron %></td>
+    <td><%= link_to 'Edit', edit_patron_path(patron) %></td>
+    <td><%= link_to 'Destroy', patron, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Patron', new_patron_path %>

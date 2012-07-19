@@ -1,0 +1,93 @@
+<%= form_for(@patron) do |f| %>
+  <% if @patron.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patron.errors.count, "error") %> prohibited this patron from being saved:</h2>
+
+      <ul>
+      <% @patron.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :last %><br />
+    <%= f.text_field :last %>
+  </div>
+  <div class="field">
+    <%= f.label :first %><br />
+    <%= f.text_field :first %>
+  </div>
+  <div class="field">
+    <%= f.label :address_1 %><br />
+    <%= f.text_field :address_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :address_2 %><br />
+    <%= f.text_field :address_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :source_id %><br />
+    <%= f.number_field :source_id %>
+  </div>
+  <div class="field">
+    <%= f.label :address_key %><br />
+    <%= f.text_field :address_key %>
+  </div>
+  <div class="field">
+    <%= f.label :ticket_notes %><br />
+    <%= f.text_field :ticket_notes %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :retiring_date %><br />
+    <%= f.date_select :retiring_date %>
+  </div>
+  <div class="field">
+    <%= f.label :is_cast %><br />
+    <%= f.check_box :is_cast %>
+  </div>
+  <div class="field">
+    <%= f.label :is_industry %><br />
+    <%= f.check_box :is_industry %>
+  </div>
+  <div class="field">
+    <%= f.label :is_press %><br />
+    <%= f.check_box :is_press %>
+  </div>
+  <div class="field">
+    <%= f.label :is_patron %><br />
+    <%= f.check_box :is_patron %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_field :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

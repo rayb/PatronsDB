@@ -1,4 +1,6 @@
 PatronsDB::Application.routes.draw do
+  resources :patrons
+
   resources :performances
 
   resources :purchases

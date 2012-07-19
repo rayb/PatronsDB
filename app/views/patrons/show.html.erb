@@ -1,0 +1,100 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Last:</b>
+  <%= @patron.last %>
+</p>
+
+<p>
+  <b>First:</b>
+  <%= @patron.first %>
+</p>
+
+<p>
+  <b>Address 1:</b>
+  <%= @patron.address_1 %>
+</p>
+
+<p>
+  <b>Address 2:</b>
+  <%= @patron.address_2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @patron.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @patron.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @patron.zip %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @patron.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @patron.email %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @patron.source_id %>
+</p>
+
+<p>
+  <b>Address key:</b>
+  <%= @patron.address_key %>
+</p>
+
+<p>
+  <b>Ticket notes:</b>
+  <%= @patron.ticket_notes %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @patron.start_date %>
+</p>
+
+<p>
+  <b>Retiring date:</b>
+  <%= @patron.retiring_date %>
+</p>
+
+<p>
+  <b>Is cast:</b>
+  <%= @patron.is_cast %>
+</p>
+
+<p>
+  <b>Is industry:</b>
+  <%= @patron.is_industry %>
+</p>
+
+<p>
+  <b>Is press:</b>
+  <%= @patron.is_press %>
+</p>
+
+<p>
+  <b>Is patron:</b>
+  <%= @patron.is_patron %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @patron.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_patron_path(@patron) %> |
+<%= link_to 'Back', patrons_path %>
