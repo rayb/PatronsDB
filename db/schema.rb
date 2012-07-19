@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120719023250) do
+ActiveRecord::Schema.define(:version => 20120719024300) do
 
   create_table "patrons", :force => true do |t|
     t.string   "last"
@@ -74,6 +74,14 @@ ActiveRecord::Schema.define(:version => 20120719023250) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "performance_id"
+  end
+
+  create_table "raffles", :force => true do |t|
+    t.string   "play_id"
+    t.string   "performance_id"
+    t.string   "patron_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "test_patrons", :force => true do |t|

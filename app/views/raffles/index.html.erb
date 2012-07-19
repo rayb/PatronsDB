@@ -1,0 +1,27 @@
+<h1>Listing raffles</h1>
+
+<table>
+  <tr>
+    <th>Play</th>
+    <th>Performance</th>
+    <th>Patron</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @raffles.each do |raffle| %>
+  <tr>
+    <td><%= raffle.play_id %></td>
+    <td><%= raffle.performance_id %></td>
+    <td><%= raffle.patron_id %></td>
+    <td><%= link_to 'Show', raffle %></td>
+    <td><%= link_to 'Edit', edit_raffle_path(raffle) %></td>
+    <td><%= link_to 'Destroy', raffle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Raffle', new_raffle_path %>
