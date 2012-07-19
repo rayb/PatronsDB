@@ -5,6 +5,7 @@ class Performance < ActiveRecord::Base
   has_many :raffles
   has_many :activities
   has_many :promotions
+  belongs_to :user
 
   attr_accessible :play_id, :start_date_time, :type
 end
