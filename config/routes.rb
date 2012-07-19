@@ -1,4 +1,6 @@
 PatronsDB::Application.routes.draw do
+  resources :promotions
+
   resources :sources
 
   resources :donations
