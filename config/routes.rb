@@ -1,4 +1,6 @@
 PatronsDB::Application.routes.draw do
+  resources :roles
+
   resources :activities
 
   resources :users
