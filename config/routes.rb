@@ -1,4 +1,6 @@
 PatronsDB::Application.routes.draw do
+  resources :sources
+
   resources :donations
 
   resources :raffles
