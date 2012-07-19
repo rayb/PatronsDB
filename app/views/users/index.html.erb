@@ -1,0 +1,35 @@
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>Login</th>
+    <th>Patron</th>
+    <th>Password digest</th>
+    <th>Roles mask</th>
+    <th>Display order</th>
+    <th>Retired date</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.login %></td>
+    <td><%= user.patron_id %></td>
+    <td><%= user.password_digest %></td>
+    <td><%= user.roles_mask %></td>
+    <td><%= user.display_order %></td>
+    <td><%= user.retired_date %></td>
+    <td><%= user.email %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User', new_user_path %>

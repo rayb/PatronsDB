@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120719030513) do
+ActiveRecord::Schema.define(:version => 20120719034351) do
 
   create_table "donations", :force => true do |t|
     t.string   "patron_id"
@@ -137,6 +137,16 @@ ActiveRecord::Schema.define(:version => 20120719030513) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.string   "patron_key"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string  "login"
+    t.integer "patron_id"
+    t.string  "password_digest"
+    t.integer "roles_mask"
+    t.integer "display_order"
+    t.date    "retired_date"
+    t.string  "email"
   end
 
 end

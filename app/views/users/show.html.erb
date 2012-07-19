@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Login:</b>
+  <%= @user.login %>
+</p>
+
+<p>
+  <b>Patron:</b>
+  <%= @user.patron_id %>
+</p>
+
+<p>
+  <b>Password digest:</b>
+  <%= @user.password_digest %>
+</p>
+
+<p>
+  <b>Roles mask:</b>
+  <%= @user.roles_mask %>
+</p>
+
+<p>
+  <b>Display order:</b>
+  <%= @user.display_order %>
+</p>
+
+<p>
+  <b>Retired date:</b>
+  <%= @user.retired_date %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
