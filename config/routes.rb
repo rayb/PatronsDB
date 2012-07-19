@@ -1,4 +1,6 @@
 PatronsDB::Application.routes.draw do
+  resources :activities
+
   resources :users
 
   resources :promotion_types

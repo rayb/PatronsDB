@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120719034351) do
+ActiveRecord::Schema.define(:version => 20120719035630) do
+
+  create_table "activities", :force => true do |t|
+    t.integer "role_id"
+    t.integer "patron_id"
+    t.integer "play_id"
+    t.integer "performance_id"
+    t.decimal "hours"
+    t.date    "start_date"
+    t.date    "end_date"
+    t.string  "notes"
+  end
 
   create_table "donations", :force => true do |t|
     t.string   "patron_id"
