@@ -13,5 +13,5 @@ class User < ActiveRecord::Base
   has_many :roles
   has_many :sources
 
-  attr_accessible :display_order, :email, :login, :password_digest, :patron_id, :retired_date, :roles_mask
+  attr_accessible :display_order, :email, :entry_user_id, :login, :password_digest, :patron_id, :retired_date, :roles_mask
 end

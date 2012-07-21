@@ -40,6 +40,41 @@ patrons.each_line do |line|
   end
 end
 
+Patron.delete_all
+open("#{Rails.root}/db/import/STC - Main merged list July 2012.csv") do |patrons|
+  patrons.each_line do |line|
+     last, first, organization, address1, address2, city, state, zip, phone, email, source, notes, company_notes = line.chomp.split(",")
+     @mod_address_1 = address1.sub(/P*.* *O*o*.* *Box/, 'PO Box')
+     @mod_address_2 = @mod_address_1.gsub(/"*/, '')
+     new_patron = Patron.new(
+         :last => (last.capitalize if last),
+         :first => (first.capitalize if first,
+         :organization => (organization if organization != ''),
+         :address_2 = (@mod_address_2 if @mod_address_2 !='')
+         :address_2 => (address2 if address2 != ''),
+         :city => (city if city != ''),
+         :state => (state if state != ''),
+         :zip => (zip if zip != ''),
+         :phone => (phone if phone != ''),
+         :email => (email if email != ''),
+         :source_id => Source.find_by_name(source).collect(&:id)
+     )
+     new_patron.save
+  end
+end
+
+Source.delete_all
+open("#{Rails.root}/db/import/STC - Main merged list July 2012.csv") do |sources|
+ sources.each_line do |line|
+   last, first, organization, address1, address2, city, state, zip, phone, email, source, notes, company_notes= line.chomp.split(",")
+   new_source = Source.find_or_create_by_name(
+       source
+       :name => (source if source != '')
+   )
+   new_source.save
+end
+end
+
 Purchase.delete_all
 open("#{Rails.root}/db/import/BPTForeignerrawdownload.csv") do |purchases|
   purchases.each_line do |line|

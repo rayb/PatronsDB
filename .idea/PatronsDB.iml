@@ -25,8 +25,11 @@
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.2.6, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.2.8, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v3.0.2, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt-ruby (v3.0.1, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.0.22, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.1.4, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cancan (v1.6.8, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="capistrano (v2.12.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capybara (v1.1.2, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.3.3, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v3.2.2, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
@@ -34,6 +37,7 @@
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.3.3, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cucumber (v1.2.1, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.1.3, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="doorkeeper (v0.4.2, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v1.4.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="factory_girl (v3.5.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
@@ -48,11 +52,13 @@
     <orderEntry type="library" scope="PROVIDED" name="guard-rails (v0.1.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="guard-rspec (v1.2.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="guard-spork (v1.1.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="highline (v1.6.13, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.1, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jasmine (v1.2.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jasmine-core (v1.2.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jasmine-headless-webkit (v0.8.4, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="journey (v1.0.4, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v2.0.2, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.7.3, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="libwebsocket (v0.1.4, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
@@ -61,9 +67,14 @@
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.19, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v3.2.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.3.6, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="net-scp (v1.0.4, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="net-sftp (v2.0.5, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="net-ssh (v2.5.2, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="net-ssh-gateway (v1.1.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.5.5, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v0.14.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rabl (v0.7.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.4.1, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-cache (v1.2, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-ssl (v1.3.2, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
