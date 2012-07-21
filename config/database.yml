@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: test_patronsdb
+  database: patrons
   pool: 5
   username: postgres
   password: password

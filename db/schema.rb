@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120719044110) do
+ActiveRecord::Schema.define(:version => 20120721204317) do
 
   create_table "activities", :force => true do |t|
     t.integer "role_id"
@@ -147,25 +147,6 @@ ActiveRecord::Schema.define(:version => 20120719044110) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.integer  "entry_user_id"
-  end
-
-  create_table "test_patrons", :force => true do |t|
-    t.string   "last"
-    t.string   "first"
-    t.string   "title_org"
-    t.string   "address_1"
-    t.string   "address_2"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
-    t.string   "phone"
-    t.string   "email"
-    t.string   "source"
-    t.string   "notes"
-    t.string   "company_notes"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-    t.string   "patron_key"
   end
 
   create_table "users", :force => true do |t|
