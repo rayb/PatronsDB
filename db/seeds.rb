@@ -5,6 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Play.create!( { name: 'Pygmalion',  start_date_time: '12/12/2010', end_da  })
+
 
 Patron.delete_all
 open("#{Rails.root}/db/import/stc_patrons.csv") do |patrons|
@@ -20,6 +22,10 @@ patrons.each_line do |line|
     @patron_key_add = '0000'
   end
   #puts @patron_key_add + ' ' + @mod_address_2
+
+  new_source = Source.find_or_create_by_name(source)
+
+
   new_patron = Patron.new(
     :last => (last_name.capitalize if last_name),
     :first => (first_name.capitalize if first_name),
@@ -32,6 +38,7 @@ patrons.each_line do |line|
     :phone => (phone if phone != ''),
     :email => (email if email != ''),
     #:source => (source if source != ''),
+    :source_id => new_source.id,
     :ticket_notes => (ticket_notes if ticket_notes != ''),
     :notes => (company_notes if company_notes != ''),
     :address_key => last_name.capitalize[0...3] + first_name.capitalize[0...3] + @patron_key_add
