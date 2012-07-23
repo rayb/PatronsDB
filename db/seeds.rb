@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Play.create!( { name: 'Pygmalion',  start_date_time: '12/12/2010', end_da  })
+Play.create!( { name: 'Pygmalion',  start_date: '12/12/2010', end_date:  })
 
 
 Patron.delete_all
