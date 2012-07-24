@@ -7,7 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Play.create!( { name: 'Pygmalion',  start_date: '12/12/2010'  })
 
-
 Patron.delete_all
 open("#{Rails.root}/db/import/stc_patrons.csv") do |patrons|
 patrons.each_line do |line|
