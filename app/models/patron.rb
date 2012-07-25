@@ -23,34 +23,34 @@ class Patron < ActiveRecord::Base
     search = gets.chomp
     if search =~ /^[a-zA-Z]{3,}/
       #last name search
-      def self.filtered_by(filter)
+      def self.filtered_by_last(filter)
         puts "filter from model: #{filter}"
         where("last like '%#{filter}%'")
       end
-      Patron.filtered_by(search)
+      Patron.filtered_by_last(search)
     elsif search =~ /,[a-zA-Z]{3,}/
       #first name search
-      def self.filtered_by(filter)
+      def self.filtered_by_first(filter)
         puts "filter from model: #{filter}"
         where("first like '%#{filter}%'")
       end
-      Patron.filtered_by(search[1..-1])
+      Patron.filtered_by_first(search[1..-1])
     elsif search =~ /\*[a-zA-Z0-9]*/
       #everything search
-      #filter by email & notes doesn't work for some reason
-      def self.filtered_by(filter)
+      #filter by email & notes doesn't work for some reason - seems to be when too many fields/not in the same order
+      def self.filtered_by_anything(filter)
         puts "filter from model: #{filter}"
         where("last || first like '%#{filter}%'")
       end
-      Patron.filtered_by(search[1..-1])
+      Patron.filtered_by_anything(search[1..-1])
     elsif search =~ /^[0-9]*/
       #address search
-      #doesn't search by both addresses, only one (second one in this case)
-      def self.filtered_by(filter)
+      #doesn't find all records - not sure if that is the case for everything..
+      def self.filtered_by_address(filter)
         puts "filter from model: #{filter}"
         where("address_1 || address_2 like '%#{filter}%'")
       end
-      Patron.filtered_by(search)
+      Patron.filtered_by_address(search)
     end
  end
 

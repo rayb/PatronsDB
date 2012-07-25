@@ -27,7 +27,7 @@
     <orderEntry type="library" scope="PROVIDED" name="arel (v3.0.2, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt-ruby (v3.0.1, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.0.22, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.1.4, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cancan (v1.6.8, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capistrano (v2.12.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capybara (v1.1.2, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
@@ -58,6 +58,7 @@
     <orderEntry type="library" scope="PROVIDED" name="jasmine (v1.2.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jasmine-core (v1.2.0, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jasmine-headless-webkit (v0.8.4, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="journey (v1.0.4, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v2.0.2, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.7.3, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="libwebsocket (v0.1.4, RVM: ruby-1.9.3-p125 [rails]) [gem]" level="application" />
