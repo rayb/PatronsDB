@@ -1,27 +1,34 @@
 PatronsDB::Application.routes.draw do
-  resources :roles
 
-  resources :activities
+  scope 'api' do
+    resources :patrons
+  end
 
-  resources :users
+  root :to => 'main#index'
 
-  resources :promotion_types
-
-  resources :promotions
-
-  resources :sources
-
-  resources :donations
-
-  resources :raffles
-
-  resources :patrons
-
-  resources :performances
-
-  resources :purchases
-
-  resources :plays
+  #resources :roles
+  #
+  #resources :activities
+  #
+  #resources :users
+  #
+  #resources :promotion_types
+  #
+  #resources :promotions
+  #
+  #resources :sources
+  #
+  #resources :donations
+  #
+  #resources :raffles
+  #
+  ##resources :patrons
+  #
+  #resources :performances
+  #
+  #resources :purchases
+  #
+  #resources :plays
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
