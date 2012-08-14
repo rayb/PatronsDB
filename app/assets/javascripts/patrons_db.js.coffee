@@ -3,7 +3,9 @@ window.PatronsDB =
   Collections: {}
   Views: {}
   Routers: {}
-  init: -> alert 'Hello from Backbone!'
+  init: ->
+    new PatronsDB.Routers.Patrons()
+    Backbone.history.start(pushState: true)
 
 $(document).ready ->
   PatronsDB.init()
