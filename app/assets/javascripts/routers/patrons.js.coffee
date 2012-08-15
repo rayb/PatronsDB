@@ -4,7 +4,9 @@ class PatronsDB.Routers.Patrons extends Backbone.Router
     '': 'index'
 
   initialize: ->
-    alert 'hello inside'
+    @patrons = new PatronsDB.Collections.Patrons()
+    @patrons.reset($('#container').data('patrons'))
+    alert @patrons.length
 
   index: ->
-    alert 'hello indexer'
+    alert 'indexing'
