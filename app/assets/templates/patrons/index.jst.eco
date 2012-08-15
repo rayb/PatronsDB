@@ -1,0 +1,10 @@
+<h1>Patronizer</h1>
+
+<!--<ul>-->
+<!--<% for patron in @patrons.models: %>-->
+    <!--<li><%= patron.get('last') %></li>-->
+<!--<% end %>-->
+<!--</ul>-->
+
+
+<ul id="patrons"></ul>

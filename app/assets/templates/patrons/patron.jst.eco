@@ -1,0 +1,1 @@
+<%= @patron.get('last') + ", " + @patron.get('first')  %>

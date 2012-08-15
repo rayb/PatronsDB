@@ -6,7 +6,10 @@ class PatronsDB.Routers.Patrons extends Backbone.Router
   initialize: ->
     @patrons = new PatronsDB.Collections.Patrons()
     @patrons.reset($('#container').data('patrons'))
-    alert @patrons.length
+#    alert @patrons.length
 
   index: ->
-    alert 'indexing'
+    view = new PatronsDB.Views.PatronsIndex(
+      collection: @patrons,
+    )
+    $('#container').html(view.render().el)
